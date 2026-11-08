@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia Army - Nosotros</title>
+    
+    <!-- CSS de Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- CSS propio (se mantiene después de Bootstrap para sobreescribir estilos) -->
+    <link rel="stylesheet" href="../CSS/styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<!-- CAMBIO 1: Se agrega 'site-container' para conectar con grid-template-areas del CSS -->
+<body class="body1 site-container">
+
+  <header class="indexHeader" id="arriba">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
+            <div class="container-fluid">
+                <a class="navbar-brand headerH1 fs-2 m-0" href="../index.html">TECNOLOGIA ARMY</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="menuNavegacion">
+                    <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-4 text-center">
+                        <li class="nav-item"><a class="nav-link fs-4 text-white" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link fs-4 text-white" href=".#">Gaming</a></li>
+                        <li class="nav-item"><a class="nav-link fs-4 text-white" href="./trabajo.html">Trabajo</a></li>
+                        <li class="nav-item"><a class="nav-link active fs-4 text-white" href="./nosotros.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link fs-4 text-white" href="./ubicacion.html">Ubicación</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- CAMBIO 3: Se agrupa todo el contenido principal dentro de la etiqueta <main> -->
+    <main class="seccion-gaming">
+        <h2 class="subtitulo-banner">LAS MEJORES PC/NOTEBOOKS GAMER DEL MERCADO ARGENTINO</h2>
+        <h2>NOTEBOOKS GAMERS Y MÁS</h2>
+
+        <!-- CAMBIO 4: Se estructuran las tarjetas dentro de la sección dedicada -->
+        <section class="imagenes-note">
+            <!-- Producto 1 -->
+            <article class="producto-card">
+                <img src="../assets/notebook acer gamer.jpg" alt="Notebook Acer Gamer" class="imagen-producto">
+                <div class="texto-producto">
+                    <h3>Notebook Acer</h3>
+                    <p>Notebook Acer Nitro 5 15.6" Core i7 24GB 512GB SSD Video W11. ¡Disfrute de un excelente rendimiento...</p>
+                </div>
+            </article>
+
+            <!-- Producto 2 -->
+            <article class="producto-card">
+                <img src="../assets/notebook legion gamer.jpg" alt="Notebook Legion Gamer" class="imagen-producto">
+                <div class="texto-producto">
+                    <h3>Notebook Legion</h3>
+                    <p>Notebook Lenovo Legion 15.6" Core i7 24GB 512GB SSD Video W11. ¡Disfrute de un excelente rendimiento...</p>
+                </div>
+            </article>
+
+            <!-- Producto 3 -->
+            <article class="producto-card">
+                <img src="../assets/notebook hp gamer.jpg" alt="Notebook HP Gamer" class="imagen-producto">
+                <div class="texto-producto">
+                    <h3>Notebook HP</h3>
+                    <p>Notebook HP Victus 15.6" Core i7 24GB 512GB SSD Video W11. ¡Disfrute de un excelente rendimiento...</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="redescopy">
+        <a href="#arriba" class="btn-arriba">Ir arriba</a>
+        <p class="copyr">Tecnologia Army© 2026 Mi Sitio Web. Todos los derechos reservados.</p>
+
+        <!-- CAMBIO 5: Agregado rel="noopener" en los enlaces externos por seguridad -->
+        <div class="social-links">
+            <a href="https://www.instagram.com/rmeghella/?hl=es" target="_blank" rel="noopener">
+                <img class="iconinsta" src="../assets/social.png" alt="logo link instagram">
+            </a>
+            <a href="https://x.com/home" target="_blank" rel="noopener">
+                <img class="iconx" src="../assets/gorjeo.png" alt="logo link X">
+            </a>
+        </div>
+    </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

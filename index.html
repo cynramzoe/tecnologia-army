@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia Army</title>
+    
+    <!-- CSS de Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- CSS propio (se dejó una sola llamada) -->
+    <link rel="stylesheet" href="./CSS/styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body class="body1 site-container">
+
+    <header class="indexHeader" id="arriba">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
+            <div class="container-fluid">
+                <a class="navbar-brand headerH1 fs-2 m-0" href="./index.html">TECNOLOGIA ARMY</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="menuNavegacion">
+                    <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-4 text-center">
+                        <li class="nav-item"><a class="nav-link active fs-4 text-white" href="./index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link fs-4 text-white" href="./pages/gaming.html">Gaming</a></li>
+                        <li class="nav-item"><a class="nav-link fs-4 text-white" href="./pages/trabajo.html">Trabajo</a></li>
+                        <li class="nav-item"><a class="nav-link fs-4 text-white" href="./pages/nosotros.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link fs-4 text-white" href="./pages/ubicacion.html">Ubicacion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="subtitulo-banner">COMPUTADORAS DE ESCRITORIO - NOTEBOOKS - IMPRESORAS 3D Y MAS</h2>
+        
+        <!-- ========================================== -->
+        <!-- COMPONENTE BOOTSTRAP: CAROUSEL            -->
+        <!-- ========================================== -->
+        <section class="container my-4">
+            <div id="carruselInicio" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicadores (puntos inferiores) -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                
+                <!-- Slides del Carrusel -->
+                <div class="carousel-inner rounded-3 border border-secondary">
+                    <div class="carousel-item active" data-bs-interval="4000">
+                        <img src="./assets/cpugaming.webp" class="d-block w-100" style="height: 380px; object-fit: cover;" alt="Equipos Gaming">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-2">
+                            <h3 class="m-0 text-white fs-3">EQUIPOS GAMING DE ALTO RENDIMIENTO</h3>
+                            <p class="m-0 fs-6">Armados a medida con procesadores Ryzen y placas RTX</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="./assets/cpudiseño.jpg" class="d-block w-100" style="height: 380px; object-fit: cover;" alt="Workstations de Diseño">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-2">
+                            <h3 class="m-0 text-white fs-3">WORKSTATIONS PARA DISEÑO Y EDICIÓN</h3>
+                            <p class="m-0 fs-6">Potencia multihilo para renderizado y producción profesional</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="./assets/cpuoficina.jpg" class="d-block w-100" style="height: 380px; object-fit: cover;" alt="PC Corporativas">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-2">
+                            <h3 class="m-0 text-white fs-3">SOLUCIONES CORPORATIVAS Y DE OFICINA</h3>
+                            <p class="m-0 fs-6">Equipos veloces y confiables para el trabajo diario</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles Izquierda / Derecha -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselInicio" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselInicio" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+        
+        <!-- Grilla de productos original (mantiene tu layout Grid) -->
+        <section class="grilla-productos">
+            <!-- Producto 1: Gama Alta -->
+            <article class="tarjeta-producto">
+                <img src="./assets/cpugaming.webp" alt="PC Gama Alta">
+                <h2>COMPUTADORA GAMA ALTA</h2>
+                <h3>PC AMD Ryzen 7 5700G 32GB...</h3>
+                <p>Descripción: Lorem ipsum dolor sit, amet consectetur...</p>
+            </article>
+
+            <!-- Producto 2: Gama Media -->
+            <article class="tarjeta-producto">
+                <img src="./assets/cpudiseño.jpg" alt="PC Gama Media">
+                <h2>COMPUTADORA GAMA MEDIA</h2>
+                <h3>PC AMD Ryzen 7 5700G 16GB...</h3>
+                <p>Descripción: Lorem ipsum dolor sit, amet consectetur...</p>
+            </article>
+
+            <!-- Producto 3: Gama Baja -->
+            <article class="tarjeta-producto">
+                <img src="./assets/cpuoficina.jpg" alt="PC Gama Baja">
+                <h2>COMPUTADORA GAMA BAJA</h2>
+                <h3>PC AMD Ryzen 3 3200G 8GB...</h3>
+                <p>Descripción: Lorem ipsum dolor sit, amet consectetur...</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="redescopy">
+        <a href="#arriba" class="btn-arriba">Ir arriba</a>
+        <p class="copyr">Tecnologia Army© 2026 Mi Sitio Web. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/rmeghella/?hl=es" target="_blank" rel="noopener">
+                <img class="iconinsta" src="./assets/social.png" alt="logo link instagram">
+            </a>
+            <a href="https://x.com/home" target="_blank" rel="noopener">
+                <img class="iconx" src="./assets/gorjeo.png" alt="logo link X">
+            </a>
+        </div>
+    </footer>
+
+    <!-- JS de Bootstrap (vital para que funcione el carrusel) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
