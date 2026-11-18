@@ -1,0 +1,14 @@
+.btn-comprar {
+  background-color: #ff4500;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+.btn-comprar:hover {
+  background-color: rgb(80%, 21.6470588235%, 0%);
+}
+.btn-comprar--secundario {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+
+/*# sourceMappingURL=main.css.map */

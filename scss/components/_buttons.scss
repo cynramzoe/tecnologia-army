@@ -1,0 +1,16 @@
+@use '../utilities/variables' as *;
+
+.btn-comprar {
+  background-color: $color-acento;
+  color: $color-texto;
+  padding: 10px 20px;
+
+  &:hover {
+    background-color: darken($color-acento, 10%);
+  }
+
+  &--secundario {
+    background-color: transparent;
+    border: 1px solid $color-texto;
+  }
+}
