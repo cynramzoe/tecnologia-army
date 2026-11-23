@@ -97,3 +97,9 @@ section img {
     }
   }
 }
+html, body {
+  background-color: $bg-body;
+  color: $text-primary;
+  line-height: 1.4;
+  overflow-x: hidden;
+}

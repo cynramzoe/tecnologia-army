@@ -1,6 +1,53 @@
 @use '../utilities/variables' as *;
 @use '../utilities/mixins' as *;
 
+// Al inicio de scss/components/_cards.scss (después de los @use)
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Placeholder para usar @extend
+%tarjeta-base {
+  border-radius: $radius-md;
+  padding: 20px;
+  color: $text-white;
+  background-color: $bg-card;
+  animation: fadeInUp 0.6s ease-out both;
+  @include transicion-suave(transform, 0.3s, ease);
+}
+
+.tarjeta-producto {
+  @extend %tarjeta-base;
+  border: 1px solid $border-dark;
+  text-align: center;
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: $text-white;
+  }
+  // ... (mantén el resto de tus estilos internos de img, h2, h3)
+}
+
+.tarjeta-resena {
+  @extend %tarjeta-base;
+  border: 2px solid $text-white;
+  width: 100%;
+  max-width: 320px;
+  text-align: left;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+  // ... (mantén el resto de tus estilos internos de h3, p, h4)
+}
+
 // Grilla de productos
 .grilla-productos {
   display: grid;
@@ -137,5 +184,58 @@
 
   &::after {
     filter: invert(1);
+  }
+}
+
+
+@mixin flex-center($direction: row, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin card-box($border-color: $border-dark, $border-width: 1px) {
+  background-color: $bg-card;
+  border: $border-width solid $border-color;
+  border-radius: $radius-md;
+  padding: 20px;
+  color: $text-white;
+}
+
+// Nuevo mixin con parámetros para transiciones dinámicas
+@mixin transicion-suave($propiedad: all, $duracion: 0.3s, $curva: ease) {
+  transition: $propiedad $duracion $curva;
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+.grilla-productos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px;
   }
 }

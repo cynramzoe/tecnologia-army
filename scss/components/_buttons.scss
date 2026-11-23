@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use '../utilities/variables' as *;
 
 .btn-comprar {
@@ -6,7 +7,7 @@
   padding: 10px 20px;
 
   &:hover {
-    background-color: darken($color-acento, 10%);
+    background-color: color.adjust($color-acento, $lightness: -10%);
   }
 
   &--secundario {

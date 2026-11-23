@@ -26,3 +26,21 @@
     }
   }
 }
+// En _nav.scss
+.menu-nav {
+  @include flex-center(column, 15px);
+  list-style: none;
+  padding: 15px 25px;
+  background-color: $bg-nav-overlay;
+  border: 2px solid $bg-black;
+  border-radius: $radius-sm;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  @include desktop {
+    gap: 60px;
+  }
+}

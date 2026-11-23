@@ -1,3 +1,4 @@
+@use '../utilities/variables' as *;
 @use 'variables' as *;
 
 @mixin flex-center($direction: row, $gap: 0) {
@@ -16,8 +17,25 @@
   color: $text-white;
 }
 
+@mixin transicion-suave($propiedad: all, $duracion: 0.3s, $curva: ease) {
+  transition: $propiedad $duracion $curva;
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: $breakpoint-desktop) {
     @content;
   }
+}
+
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+@mixin transicion-suave($propiedad: all, $duracion: 0.3s, $curva: ease) {
+  transition: $propiedad $duracion $curva;
 }
