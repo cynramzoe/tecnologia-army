@@ -1,3 +1,20 @@
-$color-fondo: #131314;
-$color-texto: #ffffff;
-$color-acento: #ff4500;
+// Colores principales
+$bg-body: #131314;
+$bg-card: #111111;
+$bg-footer: #222222;
+$bg-black: #000000;
+$bg-nav-overlay: rgba(0, 0, 0, 0.9);
+
+// Textos y bordes
+$text-primary: #e3e3e3;
+$text-white: #ffffff;
+$text-alice: aliceblue;
+$text-muted: #cccccc;
+$text-subtle: #aaaaaa;
+$border-dark: #333333;
+
+// Tipografía y medidas
+$font-main: "Bebas Neue", sans-serif;
+$radius-sm: 8px;
+$radius-md: 10px;
+$breakpoint-desktop: 768px;
