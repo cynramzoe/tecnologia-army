@@ -1,0 +1,99 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font-main;
+}
+
+body {
+  background-color: $bg-body;
+  color: $text-primary;
+  line-height: 1.4;
+}
+
+li {
+  list-style: none;
+  font-size: 1.8rem;
+
+  @include desktop {
+    font-size: 2.2rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $text-alice;
+}
+
+// Estructura principal Grid
+.site-container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.indexHeader { grid-area: header; }
+main { grid-area: main; }
+footer { grid-area: footer; }
+
+// Secciones generales e imágenes
+section img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+  border-radius: $radius-sm;
+  display: block;
+  margin: 0 auto;
+}
+
+.info-nosotros {
+  text-align: center;
+  padding: 30px 15px;
+  color: $text-white;
+
+  p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
+
+// Ubicación y mapa
+.seccion-ubicacion {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+
+  .info-ubicacion p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+
+  .contenedor-mapa {
+    width: 100%;
+    border-radius: $radius-md;
+    overflow: hidden;
+    border: 2px solid $border-dark;
+
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+
+      @include desktop {
+        height: 450px;
+      }
+    }
+  }
+}
