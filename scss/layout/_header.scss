@@ -1,0 +1,26 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.indexHeader {
+  background-image: url(../assets/header.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  padding: 20px;
+
+  @include desktop {
+    height: 400px;
+  }
+}
+
+.headerH1 {
+  width: 100%;
+  color: $text-alice;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+
+  @include desktop {
+    font-size: 3.5rem;
+  }
+}

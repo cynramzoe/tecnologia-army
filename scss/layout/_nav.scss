@@ -1,0 +1,28 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.menu-nav {
+  @include flex-center(column, 15px);
+  list-style: none;
+  padding: 15px 25px;
+  background-color: $bg-nav-overlay;
+  border: 2px solid $bg-black;
+  border-radius: $radius-sm;
+
+  @include desktop {
+    flex-direction: row;
+    gap: 60px;
+  }
+}
+
+// Sobreescritura Navbar Bootstrap
+.navbar {
+  background-color: $bg-black !important;
+  padding: 10px 20px;
+
+  .nav-link {
+    &:hover {
+      color: $text-subtle !important;
+    }
+  }
+}
